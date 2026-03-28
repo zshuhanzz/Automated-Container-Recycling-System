@@ -1,4 +1,4 @@
-ip_address = 'localhost' # Enter your IP Address here
+ip_address = 'localhost' # Enter IP Address here
 
 # SERVO TABLE CONFIGURATION
 short_tower_angle = 315 # enter the value in degrees for the identification tower 
@@ -44,9 +44,7 @@ else:
     table = servo_table(ip_address,QLabs,table_configuration,hardware)
     arm = qarm(project_identifier,ip_address,QLabs,hardware)
     bot = qbot(0.1,ip_address,QLabs,project_identifier,hardware)
-#--------------------------------------------------------------------------------
-# STUDENT CODE BEGINS
-#---------------------------------------------------------------------------------
+
 
 import time
 global timer
@@ -93,7 +91,7 @@ def load_container(timer):
         BIN = m_p[2]
 
         #Moves arm to pickup location, picks up container, brings it to the position for first bottle, drops container, arm returns home
-        arm.move_arm(0.652, 0.0, 0.278) 
+        arm.move_arm(0.649, 0.0, 0.281) 
         time.sleep(1) 
         arm.control_gripper(45)
         time.sleep(1)
@@ -178,7 +176,7 @@ def load_container(timer):
             arm.move_arm(0.652, 0.0, 0.278) 
             time.sleep(1) 
             arm.control_gripper(45)
-            time.sleep(1)
+            time.sleep(2)
             arm.move_arm(0.016, -0.453, 0.525)
             time.sleep(2) 
             arm.control_gripper(-45)
