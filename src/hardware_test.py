@@ -1,4 +1,4 @@
-ip_address = '172.17.42.73' # Enter your IP Address here
+ip_address = '172.17.42.73' # Enter IP Address here
 
 
 import sys
@@ -14,7 +14,7 @@ else:
     speed = 0.1 # in m/s
     bot = qbot(speed,ip_address,QLabs,project_identifier,hardware)
 
-#begin
+#begin testing
 
 
 import time
